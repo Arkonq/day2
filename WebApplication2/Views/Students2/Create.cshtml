@@ -1,0 +1,42 @@
+﻿@model WebApplication2.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Create</title>
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <h2>@ViewBag.Count</h2>
+
+    <div style="width:50%">
+        <form action="@Url.Action("Create")" method="post">
+            <input type="text" name="Id" placeholder="Id" value="" class="form-control" />
+            <br />
+            <input type="text" name="Name" placeholder="Name" class="form-control" />
+            <br />
+            <input type="text" name="Mark" placeholder="Mark" class="form-control" />
+            <br />
+            <input type="submit" name="Submit" value="Submit" />
+        </form>
+    </div>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @*<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>*@
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
